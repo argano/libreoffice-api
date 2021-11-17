@@ -11,7 +11,13 @@ python main.py # or gunicorn -b 0.0.0.0:8000 main:app
 
 ## Docker Image
 
-TODO:
+[argano/libreoffice-api](https://hub.docker.com/r/argano/libreoffice-api)
+
+### Build
+
+```
+docker build -t argano/libreoffice-api:lastest --network host .
+```
 
 ## API
 
