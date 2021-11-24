@@ -1,6 +1,5 @@
 from flask import Flask, request, send_file, abort
 from flask_cors import cross_origin
-from werkzeug.utils import secure_filename
 import tempfile
 import os
 import json
@@ -19,7 +18,7 @@ def get_full_class_name(obj):
 def convert():
     type = request.form["type"]
     file = request.files["file"]
-    filename = secure_filename(file.filename)
+    filename = file.filename
     file_type = filename.split(".")
     ext = file_type[1]
     outdata = ""
